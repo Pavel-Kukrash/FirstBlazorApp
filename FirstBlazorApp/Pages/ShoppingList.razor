@@ -1,10 +1,11 @@
 ﻿@page "/shoppinglist"
+@layout ShoppingListLayout
 @using FirstBlazorApp.Data
 <PageTitle>@title</PageTitle>
 
 <h3>ShoppingList</h3>
 
-<EditForm Model="@grocery" OnSubmit="AddGrocery">
+<EditForm Model="@grocery" OnValidSubmit="AddGrocery">
     <DataAnnotationsValidator />
     <ValidationSummary/>
     <p>
